@@ -1,12 +1,14 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/user_center
+    # 数据源
     hikari:
       username: root
       password: CgY1997%!@
-      # >= 6.x com.mysql.cj.jdbc.Driver
-      # <= 5.x com.mysql.jdbc.Driver
+      # mysql-connector-java >= 6.x com.mysql.cj.jdbc.Driver
+      # mysql-connector-java <= 5.x com.mysql.jdbc.Driver
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+
 server:
-  port: 8082
+  port: 8081
