@@ -2,16 +2,21 @@ package com.itmuch.myusercenter;
 
 import com.itmuch.myusercenter.dao.user.UserMapper;
 import com.itmuch.myusercenter.domain.entity.user.User;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/**
+ * @author cgy
+ */
 @RestController
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class TestController {
-    @Autowired
-    private UserMapper userMapper;
+
+    private final UserMapper userMapper;
 
     @GetMapping("/test")
     public User testInsert(){
