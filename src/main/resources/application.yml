@@ -9,6 +9,16 @@ spring:
       # mysql-connector-java <= 5.x com.mysql.jdbc.Driver
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+#        service: 优先读取这里的服务名 而不是 spring.application.name
+  application:
+    # 服务名称尽量用-，不要用_，不要用特殊字符
+    name: my-user-center
+
 
 server:
   port: 8081

@@ -54,6 +54,17 @@
             <version>1.18.16</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- 官方提供的starter spring-boot-starter-xxxx-->
+        <!-- 非官方提供的starter xxxx-spring-boot-starter-->
+
+        <!--spring-cloud-starter-{spring cloud子项目的名称}-[{模块名称}]-->
+        <!--feign spring-cloud-starter-openfeign-->
+        <!--sentinel spring-cloud-starter-alibaba-sentinel-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
