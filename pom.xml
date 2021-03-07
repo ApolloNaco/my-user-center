@@ -10,7 +10,7 @@
         <!--2：次版本，一些功能的增加，但是架构没有太大的变化，是兼容的-->
         <!--5：增量版本，bug修复-->
         <!--release：里程碑，SNAPSHOT：开发版 M：里程碑 RELEASE：正式版-->
-        <version>2.2.5.RELEASE</version>
+        <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.itmuch</groupId>
