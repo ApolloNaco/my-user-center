@@ -26,6 +26,9 @@ spring:
         input:
           destination: stream-test-topic
           group: binder-group
+        my-input:
+          destination: stream-my-topic
+          group: my-group
   #        namespace: ec51054c-fc24-40db-914f-6b0204d8609e
 #        cluster-name: NJ
   #        service: 优先读取这里的服务名 而不是 spring.application.name
@@ -39,3 +42,6 @@ server:
 
 rocketmq:
   name-server: 127.0.0.1:9876
+logging:
+  level:
+    com.alibaba.nacos: error
