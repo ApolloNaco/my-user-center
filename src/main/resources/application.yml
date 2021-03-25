@@ -18,6 +18,14 @@ spring:
           instance: c
           haha: hehe
           version: v1
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        input:
+          destination: stream-test-topic
+          group: binder-group
   #        namespace: ec51054c-fc24-40db-914f-6b0204d8609e
 #        cluster-name: NJ
   #        service: 优先读取这里的服务名 而不是 spring.application.name
