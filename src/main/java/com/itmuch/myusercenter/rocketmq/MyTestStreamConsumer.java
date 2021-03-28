@@ -10,13 +10,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class MyTestStreamConsumer {
 
-    @StreamListener(MySink.MY_INPUT)
-    public void receive(String messageBody){
-        log.info("自定义接口消费：通过stream收到了消息: messageBody = {}", messageBody);
-//        模拟抛异常测试
-//        throw new IllegalArgumentException("抛异常");
-    }
-
     /**
      * 全局异常处理
      * @param message 发生异常的消息
