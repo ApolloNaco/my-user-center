@@ -2,6 +2,7 @@ package com.itmuch.myusercenter.controller.user;
 
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
+import com.itmuch.myusercenter.auth.CheckLogin;
 import com.itmuch.myusercenter.domain.dto.user.JwtTokenRespDTO;
 import com.itmuch.myusercenter.domain.dto.user.LoginRespDTO;
 import com.itmuch.myusercenter.domain.dto.user.UserLoginDTO;
@@ -29,9 +30,22 @@ public class UserController {
     private final WxMaService wxMaService;
 
     @GetMapping("/{id}")
+    @CheckLogin
     public User findById(@PathVariable Integer id){
         log.info("我被请求了...");
         return this.userService.findById(id);
+    }
+
+    /**
+     * 模拟生成token(假的登录)
+     */
+    @GetMapping("/gen-token")
+    public String genToken() {
+        Map<String, Object> userInfo = new HashMap<>(3);
+        userInfo.put("id", 1);
+        userInfo.put("wxNickname", "根源");
+        userInfo.put("role", "admin");
+        return this.jwtOperator.generateToken(userInfo);
     }
 
     @PostMapping("/login")
